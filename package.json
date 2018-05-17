@@ -1,0 +1,46 @@
+{
+  "name": "rx-paginated",
+  "files": ["rx-paginated.js"],
+  "version": "0.0.1",
+  "description": "Concatenates paginated array",
+  "main": "rx-paginated.js",
+  "scripts": {
+    "pretty": "pretty-quick",
+    "prettystaged": "pretty-quick --staged",
+    "pretty-quick": "pretty-quick",
+    "analyze": "node_modules/.bin/eslint .",
+    "test": "jest",
+    "test:ci": "jest --ci --coverage --testResultsProcessor=jest-junit",
+    "verify": "npm-run-all \"pretty{1}\" --parallel analyze test --"
+  },
+  "dependencies": {
+    "rxjs": "^6.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-plugin-jest": "^21.15.1",
+    "husky": "^1.0.0-rc.4",
+    "jest": "^22.4.3",
+    "jest-junit": "^3.7.0",
+    "npm-run-all": "^4.1.3",
+    "prettier": "^1.12.1",
+    "pretty-quick": "^1.4.1",
+    "rxjs-marbles": "^3.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run verify staged"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vorobievalex/rx-paginated.git"
+  },
+  "keywords": ["RxJS", "pagination", "GitHub"],
+  "author": "Alexander Vorobyev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vorobievalex/rx-paginated/issues"
+  },
+  "homepage": "https://github.com/vorobievalex/rx-paginated#readme"
+}
